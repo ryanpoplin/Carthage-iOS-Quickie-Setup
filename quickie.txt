@@ -1,0 +1,11 @@
+Quick Carthage Usage:
+
+- update carthage: brew update, brew install carthage
+- cd to iOS project directory: touch Cartfile
+- open -a Xcode Cartfile
+- in Cartfile: github "x/x"
+- carthage update --platform iOS
+- Go To Finder: drag the frameworks from the iOS folder and drag and drop them into Xcode's Linked Frameworks and Libraries section
+- add this to the build phase: /usr/local/bin/carthage copy-frameworks
+- click the + under Input Files and add an entry for each framework: $(SRCROOT)/Carthage/Build/iOS/x.framework $(SRCROOT)/Carthage/Build/iOS/y.framework
+- build the project
